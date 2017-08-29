@@ -1,0 +1,139 @@
+// These are the styles to make some of the templates look extra nice.
+// Feel free to remove these styles for production!
+
+// Body Styles 
+body,
+html, 
+.body {
+  // background: #f3f3f3 !important;
+  background: #ffffff !important;
+
+}
+
+.container.header {
+  background: #f3f3f3;
+}
+
+.pageTable {
+    width: 580px;
+}
+
+.body-drip {
+  border-top: 8px solid #663399;
+}
+
+/* * @section Large_Column Headline * @title Large Column Headline*/
+.headline,
+.headline p {
+// font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+ /*@editable*/
+text-align: left; /*@editable*/
+margin: 10px 0 0; /*@editable*/
+font-weight: normal; /*@editable*/
+font-size: 22px; /*@editable*/
+font-weight: bold; /*@editable*/
+line-height: 29px; /*@editable*/
+text-transform: none; /*@editable*/
+background: transparent; /*@editable*/
+margin-bottom: 0px;
+}
+
+@media only screen and (max-width: #{$global-breakpoint}) {
+  .column-item {
+    &--media {
+      width: 100% !important;
+    }
+  }
+}
+
+.column-item {
+  p:not(.lead) {/*@editable Text Color*/ /*@theme text-color*/
+      color: #231f20;/*@editable Text Font*/
+      font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;/*@editable Text Font Size*/
+      font-size: 14px; /*@editable*/
+      line-height: 21px; /*@editable*/
+      text-align: left; /*@editable*/
+      text-transform: none; /*@editable*/
+      margin: 5px 0 12px 0;
+
+      a {
+        border-bottom: 1px dotted;
+        text-decoration: none;
+        word-wrap: break-word;
+        font-weight: bold;
+      }
+    }
+  
+
+@media only screen and (max-width: #{$global-breakpoint}) {
+    &--horizontal {
+      &.first {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+/* * @section Column_Title * @title Small Column Title*/
+.column-title,
+.column-title p {
+  margin: 5px 0 0 0;
+  font-weight: normal;/*@editable Headline Color*/ /*@theme headline-text-color*/
+  color: #231f20;/*@editable Headline Font*/
+  font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;/*@editable Headline Font Size*/
+  font-size: 16px; /*@editable*/
+  font-weight: bold; /*@editable*/
+  line-height: 21px; /*@editable*/
+  text-align: left; /*@editable*/
+  text-transform: none;
+}
+
+// Full Width Headers
+.header {
+  background: #8a8a8a;
+}
+
+.header .columns {
+  padding-bottom: 0;
+}
+
+.header p {
+  color: #fff;
+  padding-top: 15px;
+}
+
+.header .wrapper-inner {
+  padding: 20px;
+}
+
+.header .container {
+  background: transparent;
+}
+
+//Links
+.u-link {
+    border-bottom: 1px dotted;
+    text-decoration: none;
+    word-wrap: break-word;
+    font-weight: bold;
+}
+
+// Social Media
+table.button.facebook table td {
+  background: #3B5998 !important;
+  border-color: #3B5998;
+}
+
+table.button.twitter table td {
+  background: #1daced !important;
+  border-color: #1daced;
+}
+
+table.button.google table td {
+  background: #DB4A39 !important;
+  border-color: #DB4A39;
+}
+
+.wrapper.secondary {
+  background: #f3f3f3;
+}

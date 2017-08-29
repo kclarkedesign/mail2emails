@@ -1,0 +1,115 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{root}}css/app.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{{subject}}</title>
+    <!-- <style> -->
+    <!--[if lt IE 11]><style data="mobile-ie" data-condition="if lt IE 11" data-rule="@media only screen and (max-width: 480px), screen and (max-device-width: 480px)">@media only screen and (max-width: 480px), screen and (max-device-width: 480px) {ignore { rule-ignored: "why"; }table[class*="mainTable"] img, img { max-width:320px !important;}#header_img { width: 320px !important }div.ec_attachments, table, tbody, tr, td { width:100% !important;}}</style><![endif]-->
+
+    <style>
+      group.colorscheme { /*@editable Page Background Color*/
+      page-background-color: #EEEEEE; /*@editable Header Background */
+      header-background-color: #ffffff; /*@editable Main Text Color*/
+      text-color: #231f20;  /*@editable Link Color*/
+      link-color: #424242;  /*@editable Footer Link Color*/
+      footer-link-color: #0400F4; /*@editable Body Background Color*/
+      body-background-color: #FFFFFF; /*@editable Footer Background Color*/
+      footer-background-color: #d2d2d2; /*@editable Vertical Line Color*/
+      line-color: #d2d2d2;  /*@editable Top Bar Background Color*/
+      topBar-background-color: #EEEEEE; /*@editable Top Link Color*/
+      top-link-color: #424242;  /*@editable Footer Text Color*/
+      footer-text-color: #231f20; /*@editable Top Text Color*/
+      top-text-color: #231f20;  /*@editable Headlines Color*/
+      headline-text-color: #231f20;
+    }/* * @themedefinition default * @title Default*/
+    theme.default {
+      text-color: #231f20;
+      link-color: #424242;
+      footer-link-color: #0400F4;
+      page-background-color: #EEEEEE;
+      header-background-color: #ffffff;
+      body-background-color: #FFFFFF;
+      footer-background-color: #d2d2d2;
+      line-color: #DDDDDD;
+      topBar-background-color: #EEEEEE;
+      top-link-color: 990000;
+      footer-text-color: #000000;
+      top-text-color: #000000;
+      headline-text-color: #666666;
+    }
+    /* * @section Background_Colors_Layout * @title Colors and Layout*/
+    table.mainTable { /*@editable Page Background Color*/ /*@theme page-background-color*/
+      background-color: #ffffff;
+    }/* * @section Background_Colors_Layout * @title Colors and Layout*/
+    table.pageTable {
+      width: 606px;
+      padding: 0;
+      margin: 0 auto;
+    }/* * @section Background_Colors_Layout * @title Colors and Layout*/
+    #view_browser { /*@editable Top Bar Background Color*/ /*@theme topbar-background-color*/
+      background-color: #ffffff;
+    }/* * @section Top_Bar * @title Top Bar*/
+    #view_browser div,
+    #view_browser p {
+      text-align: center; /*@editable Text Color*/ /*@theme top-text-color*/
+      color: #231f20; /*@editable Text Font*/
+      font-family: Arial, Verdana, Geneva, Helvetica, sans-serif; /*@editable Text Size*/
+      font-size: 10px; /*@editable */
+      font-weight: bold; /*@editable */
+      margin: 1em 5px;
+    }/* * @section Top_Bar * @title Top Bar*/
+    #view_browser a { /*@editable Link Color*/ /*@theme top-link-color*/
+      color: #231f20; /*@editable */
+      font-weight: bold;
+    }
+    #view_browser p,
+    .footer p { /*@editable*/
+      margin: 0;
+    }
+  </style>
+  <style type="text/css" data="mobile" data-rule="@media only screen and (max-width: 480px), screen and (max-device-width: 480px)" data-title="Mobile" data-width="335">
+    @media only screen and (max-width: 480px), screen and (max-device-width: 480px) {
+      table[class*="pageTable"] {
+        width: 100%;
+        min-width: 100% !important;
+      }
+      table[class*="mainTable"] img, td[id="content"] img, td[id="sidebarL"] img, td[id="sidebarR"] img {
+        max-width: 100% !important;
+        height: auto !important;
+      }
+
+      table[class="pageTable"], table[id="main"], div[class="ec_attachments"] {
+        width: 320px !important;
+      }
+    }
+  </style>
+  </head>
+  <body style="margin: 0;padding: 0;background-repeat: no-repeat;font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;font-size: 12px;width: 100% !important;display: block !important">
+    <span class="preheader">{{description}}</span>
+    <table class="mainTable body" align="center" width="100%">
+      <tr>
+        <td class="center" align="center" valign="top">
+          <table class="pageTable" align="center" width="606px">
+            <tr>
+              <td>
+                <center>
+                  {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened emails are created. --}}
+                  {{> body}}
+                </center>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <!-- prevent Gmail on iOS font size manipulation -->
+   <div style="display:none; white-space:nowrap; font:15px courier; line-height:0;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div>
+  </body>
+</html>
+

@@ -1,0 +1,25 @@
+.donation-callout {
+	background: #edd04d;
+	padding: 10px;
+
+	.item-title {
+		border-bottom: 1px solid #ceac16;
+		padding-bottom: 6px;
+		font-weight: bold;
+	}
+}
+
+.donation-callout__header,
+.donation-callout__description {
+	padding: 15px;
+}
+
+.donation-callout__amount {
+	vertical-align: middle;
+	font-weight: bold;
+    font-size: 16px;
+}
+
+
+
+
